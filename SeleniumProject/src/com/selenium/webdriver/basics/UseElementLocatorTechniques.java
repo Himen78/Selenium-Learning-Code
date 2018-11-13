@@ -42,12 +42,18 @@ public class UseElementLocatorTechniques {
 	
 	public void elementLocatorTechniqueUsingFacebook()
 	{
-		invokeBrowser("https://www.facebook.com");
-		driver.findElement(By.name("firstname")).sendKeys("Himen");
-		driver.findElement(By.name("lastname")).sendKeys("Patel");
-		driver.findElement(By.name("reg_email__")).sendKeys("himenpatel2011@gmail.com");
-		//Thread.sleep(3000);
-		//driver.close();
+		try {
+			invokeBrowser("https://www.facebook.com");
+			driver.findElement(By.name("firstname")).sendKeys("Himen");
+			driver.findElement(By.name("lastname")).sendKeys("Patel");
+			driver.findElement(By.name("reg_email__")).sendKeys("himenpatel2011@gmail.com");
+			// Change Code
+			Thread.sleep(3000);
+			driver.close();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static void main(String[] args) {
