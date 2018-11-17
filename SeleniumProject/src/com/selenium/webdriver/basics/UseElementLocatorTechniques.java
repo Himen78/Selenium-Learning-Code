@@ -34,7 +34,7 @@ public class UseElementLocatorTechniques {
 			driver.findElement(By.className("nav-input")).click();
 			driver.navigate().back();
 			driver.findElement(By.partialLinkText("Customer")).click();
-			driver.navigate().back();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -45,10 +45,15 @@ public class UseElementLocatorTechniques {
 		try {
 			invokeBrowser("https://www.facebook.com");
 			driver.findElement(By.name("firstname")).sendKeys("Himen");
-			driver.findElement(By.name("lastname")).sendKeys("Patel");
-			driver.findElement(By.name("reg_email__")).sendKeys("himenpatel2011@gmail.com");
+			//driver.findElement(By.name("lastname")).sendKeys("Patel");
+			//driver.findElement(By.name("reg_email__")).sendKeys("himenpatel2011@gmail.com");
 			// Change Code
 			Thread.sleep(3000);
+			
+			driver.findElement(By.cssSelector("input#email")).sendKeys("abc@gmail.com");
+			
+			
+			
 			//driver.close();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
