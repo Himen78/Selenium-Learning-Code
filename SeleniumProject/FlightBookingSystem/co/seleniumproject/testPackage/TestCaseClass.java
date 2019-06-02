@@ -35,7 +35,7 @@ public class TestCaseClass extends HelperClass {
 		selectFlightpage.returnAirlineWordPress("United Airine 363");
 		selectFlightpage.continu();
 		BookFlightPage bookFlightPage = PageFactory.initElements(driver, BookFlightPage.class);
-		bookFlightPage.purchasePress("Himen", "Patel", "Vegetarial", "Mastercard", "123456789", "March", "2008", "Himen", "H", "P");
+		bookFlightPage.purchasePress("Himen", "Patel", "Vegetarial", "Mastercard", "123456789", "March", "2008", "Himen", "Subhashchandra", "Patel");
 		FlightConfirmationPage flightConfirmationPage = PageFactory.initElements(driver, FlightConfirmationPage.class);
 		String bookingDeatilsFile = System.getProperty("user.dir")+"\\"+"ScreenShots\\FlightConfirmationDetails - "+CaptureScreenShot.getDateTimeStamp()+".png";
 		try {
