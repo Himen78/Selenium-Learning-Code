@@ -15,7 +15,8 @@ public class Screenshot {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Himen\\Downloads\\Selenium Related\\Drivers\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://www.google.co.in");
+		driver.manage().window().maximize();
+		driver.get("https://github.com/");
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(source, new File("./ScreenShots/Screens.png"));
