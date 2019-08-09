@@ -25,7 +25,7 @@ public class RegistrationProcess {
 					"C:\\Users\\Himen\\Downloads\\Selenium Related\\Drivers\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else {
-			System.setProperty("webdriver.geco.driver",
+			System.setProperty("webdriver.gecko.driver",
 					"C:\\Users\\Himen\\Downloads\\Selenium Related\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
