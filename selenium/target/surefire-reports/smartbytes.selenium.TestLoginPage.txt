@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: smartbytes.selenium.TestLoginPage
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.306 sec <<< FAILURE!
+test_login(smartbytes.selenium.TestLoginPage)  Time elapsed: 8.295 sec  <<< FAILURE!
+junit.framework.ComparisonFailure: expected:<My Account> but was:<Account Login>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at smartbytes.selenium.TestLoginPage.test_login(TestLoginPage.java:47)
+
