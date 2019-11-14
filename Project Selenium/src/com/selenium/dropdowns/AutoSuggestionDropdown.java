@@ -53,11 +53,8 @@ public class AutoSuggestionDropdown {
 		for(int i=1;i<3;i++)
 
 		{
-
 		source.sendKeys(Keys.ARROW_DOWN);
-
 		}
-
 		source.sendKeys(Keys.ENTER);
 
 		System.out.println("Code Run Successfully.");
