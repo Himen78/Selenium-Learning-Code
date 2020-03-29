@@ -15,9 +15,9 @@ public class FramesExample {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/droppable/");
 		driver.manage().window().maximize();
-		System.out.println(driver.findElements(By.tagName("iframe")).size());
-//		driver.switchTo().frame(0);
-		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[class='demo-frame']")));
+		System.out.println(driver.findElements(By.tagName("iframe")).size()); // We get the number of frame on browser.
+//		driver.switchTo().frame(0); // we can switch frame by index.
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[class='demo-frame']"))); // Switch the frame from window content
 		Actions a = new Actions(driver);
 		WebElement source = driver.findElement(By.id("draggable"));
 		WebElement target = driver.findElement(By.id("droppable"));
@@ -26,11 +26,6 @@ public class FramesExample {
 		
 		System.out.println("Test Passed");
 		
-		
-		
-		
-		
-
 	}
 
 }
