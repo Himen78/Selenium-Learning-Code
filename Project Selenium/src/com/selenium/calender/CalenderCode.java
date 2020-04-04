@@ -17,17 +17,21 @@ public class CalenderCode {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.path2usa.com/travel-companions");
 		driver.findElement(By.id("travel_date")).click();
-
+		
+		while(!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText().contains("August"))
+		{
+			driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='next']")).click();
+		}
 		List<WebElement> calender = driver.findElements(By.className("day"));
 
 		int count = driver.findElements(By.className("day")).size();
 		for (int i = 0; i < count; i++) {
 			String text = driver.findElements(By.className("day")).get(i).getText();
-			if (text.equalsIgnoreCase("30")) {
+			if (text.equalsIgnoreCase("21")) {
 				driver.findElements(By.className("day")).get(i).click();
+				System.out.println("Test getting passed...!!");
 				break;
 			}
-			System.out.println("Test getting passed");
 		}
 
 	}
