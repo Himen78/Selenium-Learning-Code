@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="UserPassword" value="TestNG Login Password"/>
+  <parameter name="UserLoginID" value="TestNG Login ID"/>
+  <test name="First Test">
+    <classes>
+      <class name="com.selenium.testng.TestNGExampleOne"/>
+      <class name="com.selenium.testng.TestNGExampleTwo"/>
+    </classes>
+  </test> <!-- First Test -->
+  <test name="Second Test">
+    <classes>
+      <class name="com.selenium.testng.TestNGExampleThird">
+        <methods>
+          <exclude name="Exclude.*"/>
+        </methods>
+      </class> <!-- com.selenium.testng.TestNGExampleThird -->
+    </classes>
+  </test> <!-- Second Test -->
+</suite> <!-- Failed suite [Suite] -->
