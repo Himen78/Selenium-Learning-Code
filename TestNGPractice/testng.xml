@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests" thread-count="5">
 	<parameter name="UserLoginID" value="TestNG Login ID"/>
 	<parameter name="UserPassword" value="TestNG Login Password"/>
+	<listeners>
+		<listener class-name="com.selenium.testng.TestNGListeners"/>
+	</listeners>
   <test name="First Test">
     <classes>
       <class name="com.selenium.testng.TestNGExampleOne">
